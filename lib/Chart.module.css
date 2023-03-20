@@ -1,0 +1,34 @@
+.chart {
+  display: grid;
+  grid-template-columns: 'auto 1fr';
+}
+
+.legend {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Disable border for last element */
+.legend:nth-last-of-type(-n+2) {
+  border-bottom: 0;
+}
+/* Stripe every other row */
+.legend:nth-last-of-type(4n), .legend:nth-last-of-type(4n-1) {
+  background-color: gainsboro;
+}
+
+.row {
+  border-bottom: 1px solid black;
+  padding: 0.25rem 0;
+}
+/* Disable border for last element */
+.row:nth-last-of-type(-n+2) {
+  border-bottom: 0;
+}
+/* Stripe every other row */
+.row:nth-last-of-type(4n), .legend:nth-last-of-type(4n-1) {
+  background-color: gainsboro;
+}
